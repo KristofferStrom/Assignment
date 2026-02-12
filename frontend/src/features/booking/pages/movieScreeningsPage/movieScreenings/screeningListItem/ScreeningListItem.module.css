@@ -1,0 +1,155 @@
+.movieScreening {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  /* Dark card */
+  background: #242333;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.45);
+
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.movieScreening:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.55);
+}
+
+.movieScreening[aria-disabled="true"] {
+  opacity: 0.65;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0; /* gör att text kan truncas */
+}
+
+.timeBlock {
+  width: 86px;
+  flex: 0 0 auto;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: grid;
+  justify-items: start;
+  gap: 2px;
+}
+
+.time {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #f9fafb;
+  line-height: 1.1;
+}
+
+.date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.auditorium,
+.language,
+.format {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e5e7eb;
+
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.format {
+  background: rgba(99, 102, 241, 0.16);
+  border-color: rgba(99, 102, 241, 0.28);
+  color: #c7d2fe;
+}
+
+.right {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 800;
+  color: #f9fafb;
+}
+
+.availableSeats {
+  font-size: 12px;
+  font-weight: 700;
+  color: #34d399; /* grön i dark */
+}
+
+.soldOut {
+  color: #f87171; /* röd i dark */
+}
+
+
+
+.choose:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.choose:active {
+  transform: translateY(0);
+}
+
+.chooseDisabled {
+  font-size: 13px;
+  font-weight: 800;
+  color: #9ca3af;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Mobil: stapla så tid/meta ligger över och CTA under */
+@media (max-width: 520px) {
+  .movieScreening {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .right {
+    justify-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .choose,
+  .chooseDisabled {
+    width: 100%;
+    text-align: center;
+  }
+}

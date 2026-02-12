@@ -1,0 +1,15 @@
+.adminMovieDetailsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+}
+
+.adminMovieDetailsPage .headerTitle {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}

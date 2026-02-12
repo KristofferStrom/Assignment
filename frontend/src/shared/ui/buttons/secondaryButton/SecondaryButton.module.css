@@ -1,0 +1,7 @@
+.secondaryButton {
+  background-color: #fff;
+}
+
+.secondaryButton:hover {
+  background-color: #6feaf6;
+}

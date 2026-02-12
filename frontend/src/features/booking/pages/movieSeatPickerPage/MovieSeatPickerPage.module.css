@@ -1,0 +1,19 @@
+.movieSeatPickerPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.movieTitle {
+  color: #6feaf6;
+}
+
+.bookBtn{
+  margin-top: 1.5rem;
+}

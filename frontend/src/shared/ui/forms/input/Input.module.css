@@ -1,0 +1,23 @@
+.input {
+  padding: 0.7rem;
+  border: 1px solid #cccccc32;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #242333;
+  color: #ffffff;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff;
+  caret-color: #ffffff;
+
+  /* Tvinga bakgrundsfärgen (autofill brukar "måla" ovanpå background-color) */
+  -webkit-box-shadow: 0 0 0px 1000px #242333 inset;
+  box-shadow: 0 0 0px 1000px #242333 inset;
+
+  /* Minskar "flash" när autofill appliceras */
+  transition: background-color 9999s ease-out 0s;
+}

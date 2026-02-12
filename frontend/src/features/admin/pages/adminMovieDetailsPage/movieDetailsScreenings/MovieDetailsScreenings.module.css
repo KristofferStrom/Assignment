@@ -1,0 +1,169 @@
+.screeningsContainer {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.screeningsTitle {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.deleteButton {
+  background-color: #832727;
+  color: white;
+  padding-inline: 0.5rem !important;
+  padding-block: 0.4rem !important;
+}
+
+.deleteButton svg {
+  stroke-width: 0.15rem;
+  padding: 0;
+  margin: 0;
+}
+
+.deleteButton:hover {
+  background-color: #a83232;
+  color: rgb(212, 211, 211);
+}
+
+.screeningsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Wrappern scrollar (stabilare än tbody-scroll) */
+.screeningsTableWrapper {
+  width: 100%;
+  max-height: 20rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+
+  scrollbar-gutter: stable;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(111, 234, 246, 0.55) rgba(255, 255, 255, 0.06);
+}
+
+.screeningsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  background: transparent;
+}
+
+/* Kolumnbredder (du använder colgroup i JSX) */
+.colTime {
+  width: 25%;
+}
+.colScreen {
+  width: 15%;
+}
+.colLang {
+  width: 10%;
+}
+.colSeats {
+  width: 16%;
+}
+.colActions {
+  width: 7%;
+}
+
+.screeningsTable th,
+.screeningsTable td {
+  min-width: 0; /* viktigt för fixed layout */
+}
+
+/* Sticky header när wrappern scrollar */
+.screeningsTable thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+
+  background: rgba(36, 35, 51, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.screeningsTable tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+  vertical-align: middle;
+
+  /* Default: inga sid-scroll pga långa texter */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tid-kolumn: tillåt radbrytning hellre än horisontell scroll */
+.screeningsTable tbody td:first-child {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.screeningsTable tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.screeningsTable tbody tr:hover td {
+  background: rgba(111, 234, 246, 0.06);
+}
+
+.screeningsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.actionsHeader {
+  text-align: right;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.actionsCell {
+  text-align: right;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.actionsCell button {
+  max-width: 100%;
+  padding: 0.55rem 0.9rem;
+}
+
+.seatsCell {
+  font-weight: 800;
+}
+
+.centerCell {
+  text-align: center;
+  padding: 18px 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Scrollbar styling (Chromium/Edge/Safari) */
+.screeningsTableWrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.screeningsTableWrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.screeningsTableWrapper::-webkit-scrollbar-thumb {
+  background: rgba(111, 234, 246, 0.45);
+  border-radius: 999px;
+  border: 2px solid rgba(36, 35, 51, 1);
+}

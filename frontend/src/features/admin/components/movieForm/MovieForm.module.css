@@ -1,0 +1,41 @@
+
+.priceInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.priceInputContainer span {
+  font-size: 1.2rem;
+}
+
+.priceInputContainer input {
+  max-width: 7rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actionButtons button {
+  padding: 0.8rem 1.5rem;
+}
+
+.deleteButton {
+  background-color: #832727;
+  color: rgb(212, 211, 211);
+}
+
+.deleteButton:hover {
+  background-color: #a83232;
+  color: rgb(212, 211, 211);
+}
+
+.headerTitle {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
