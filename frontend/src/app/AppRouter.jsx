@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout";
 import MovieScreeningsPage from "../features/booking/pages/movieScreeningsPage/MovieScreeningsPage";
 import BookingLayout from "../features/booking/layouts/BookingLayout";
@@ -9,10 +9,11 @@ import AdminLayout from "../features/admin/layout/AdminLayout";
 import AdminMovieDetailsPage from "../features/admin/pages/adminMovieDetailsPage/AdminMovieDetailsPage";
 import AdminMovieCreatePage from "../features/admin/pages/adminMovieCreatePage/AdminMovieCreatePage";
 import AdminScreeningCreatePage from "../features/admin/pages/adminScreeningCreatePage/AdminScreeningCreatePage";
+import { HashRouter } from "react-router-dom";
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<RootLayout />}>
           <Route index element={<Navigate to="booking" replace />} />
@@ -41,6 +42,6 @@ export default function AppRouter() {
           </Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
