@@ -1,5 +1,6 @@
 const BASE_URL = (
-  import.meta.env.VITE_API_BASE_URL ?? "http://localhost:3000"
+  import.meta.env.VITE_API_BASE_URL ??
+  (location.protocol === "https:" ? "https://localhost:7103" : "http://localhost:5085")
 ).replace(/\/$/, "");
 
 export class ApiError extends Error {

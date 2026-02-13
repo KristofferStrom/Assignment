@@ -1,9 +1,26 @@
 # Movie Seat Booking – React + .NET REST API (Monorepo)
 
-## Köra projektet lokalt
+## Starta backend (API)
 
-För att testa projektet räcker det att starta backend-API:t och sedan starta frontenden.  
-Seed kör automatiskt vid start, så det finns testdata direkt.
+### Alternativ 1: Visual Studio (enklast)
+
+1. Öppna lösningen i Visual Studio.
+2. Starta med profilen **`https`**
+
+API:t kör då på:
+
+- `https://localhost:7103`
+- `http://localhost:5085`
+
+### Alternativ 2: Terminal
+
+Kör från repo-roten:
+cd MovieSeatBooking.Api dotnet run --launch-profile https
+
+Vid start kör API:t:
+
+- EF migrations
+- seed-data
 
 ## Beskrivning
 
