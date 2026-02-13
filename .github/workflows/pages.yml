@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: Assignment/frontend
+        working-directory: frontend
 
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: Assignment/frontend/dist
+          path: frontend/dist
 
   deploy:
     runs-on: ubuntu-latest
