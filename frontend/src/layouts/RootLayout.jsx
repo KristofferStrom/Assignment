@@ -14,6 +14,7 @@ export default function RootLayout() {
       clearReceipt(bookingId);
     }
   };
+
   return (
     <div>
       <nav className={styles.header}>
